@@ -18,6 +18,10 @@ class Application < Sinatra::Base
     return names.sort.join(",")
   end
 
+  get '/hello' do
+    return erb(:index)
+  end
+
   # post '/submit' do
   #   name = params[:name]
   #   message = params[:message]
