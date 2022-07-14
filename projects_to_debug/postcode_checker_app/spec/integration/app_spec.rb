@@ -25,7 +25,7 @@ describe Application do
       response = post('/check', postcode: 'EC1A 1BB')
 
       expect(response.status).to eq(200)
-      expect(response.body).to include('This is not a valid postcode')
+      expect(response.body).to include('This is a valid postcode')
     end
 
     it 'should get invalid postcode result' do
