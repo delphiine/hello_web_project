@@ -12,7 +12,6 @@ class Application < Sinatra::Base
 
   post '/hello' do
     @name = params[:name]
-    #[^a-zA-Z\s]
     if @name.match?(/[^a-zA-Z\s]/)
       return "This is an invalid string."
     else
