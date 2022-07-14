@@ -16,7 +16,7 @@ describe Application do
 
       expect(response.status).to eq(200)
       expect(response.body).to include('form')
-      expect(response.body).to include('<input type="date" name="birthday" required pattern="\d{2}-\d{2}">')
+      expect(response.body).to include('<input type="text" name="birthday" required pattern="\d{2}-\d{2}">')
     end
   end
 
