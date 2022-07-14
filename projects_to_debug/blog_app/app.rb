@@ -15,14 +15,14 @@ class Application < Sinatra::Base
   end
 
   get '/' do
-    @post = @post_manager.all_posts
+    @posts = @post_manager.all_posts
 
     return erb(:index)
   end
 
   # get posts for a given tag
   get '/tag/:tag' do
-    @post = @post_manager.all_posts_by_tag(params[:tag])
+    @posts = @post_manager.all_posts_by_tag(params[:tag])
 
     return erb(:index)
   end

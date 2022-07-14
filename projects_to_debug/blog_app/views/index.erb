@@ -7,6 +7,7 @@
 <body>
   <h1>The Broken Blog</h1>
   <div>
+  <h3>Add a new post</h3>
   <form method="POST" action="/posts">
     Title: <input type="text" name="title" />
     Content: <input type="text" name="content" />
@@ -16,7 +17,7 @@
   </form>
   </div>
   <div>
-    <% @post.each do |post| %>
+    <% @posts.each do |post| %>
       <br><br>
       <h3><%= post.title %></h3>
       <%= post.content %>
