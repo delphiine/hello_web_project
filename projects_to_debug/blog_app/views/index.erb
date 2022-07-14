@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Broken Blog</title>
+</head>
+<body>
+  <h1>The Broken Blog</h1>
+  <div>
+  <form method="POST" action="/posts">
+    Title: <input type="text" name="title" />
+    Content: <input type="text" name="content" />
+    Tags: <input type="text" name="tags" />
+
+    <input type="submit" value="Submit" />
+  </form>
+  </div>
+  <div>
+    <% @post.each do |post| %>
+      <br><br>
+      <h3><%= post.title %></h3>
+      <%= post.content %>
+    <% end %>
+  </div>
+</body>
+</html>
